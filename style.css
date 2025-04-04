@@ -1,0 +1,136 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #3780bb, #4b5fa2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.container {
+    background: linear-gradient(135deg, #3280da, #272e8a);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgb(29, 113, 161);
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espacio entre los elementos */
+}
+
+/* Formulario */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+h1 {
+    font-family: "Rubik Dirt", system-ui;
+    font-size: 4rem;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.grupo {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+label {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    width: 35%;
+}
+
+input, textarea, select {
+    font-family: "Roboto", sans-serif;
+    width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input, textarea, select:hover {
+    border-color: #0efa70;
+    box-shadow: 0 4px 8px rgb(0, 17, 255);
+    transition: all 0.3s ease;
+}
+
+button {
+    padding: 10px;
+    background: #00eeff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 25%;
+    justify-self: center; /* Centra el botón horizontalmente */
+}
+
+button:hover {
+    background: #4751df;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Esto ayudara para que pueda ser responsivo en un dispositivo que sea mediano */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1rem; 
+    }
+
+    .grupo {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    input, textarea, select {
+        width: 100%; 
+    }
+
+    label {
+        width: 100%;
+        text-align: left; 
+    }
+
+    button {
+        width: 100%; 
+        padding: 12px;
+    }
+}
+
+/* y este es para dispositivos como celulares que son muy pequeños */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px; /
+    }
+}
